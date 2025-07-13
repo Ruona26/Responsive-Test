@@ -319,7 +319,12 @@ nav a:hover, .active {
         align-items: center;
         justify-content: center;
     }
+    .courses-section h3, .events h3 {
+        margin-left: 0;
+       padding-left: 0;
+       text-align: center;
 
+    }
     .card, .cardm {
         width: 45vw;
         height: auto;
@@ -365,5 +370,11 @@ nav a:hover, .active {
     }
     .support {
         margin-top: -1.5rem;
+    }
+} 
+
+@media screen and (max-height: 600px) {
+    .support {
+        margin-top: 7rem;
     }
 }
