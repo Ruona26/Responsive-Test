@@ -183,9 +183,8 @@ nav a:hover, .active {
     display: flex;
     gap: 0.625rem;
     width: 27vw;
-    height: 12vh;
+    /* height: 12vh; */
     cursor: pointer;
-
     
 }
 .date {
