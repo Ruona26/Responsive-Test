@@ -350,13 +350,20 @@ nav a:hover, .active {
     }
     .support {
         text-align: center;
-        width: 100%;
-        margin-left: -3rem;
-        
+        margin-top: 1.5rem;
+    }
+    .support h3 {
+        padding-left: 0;
+    }
+    .support p {
+        margin-left: 0;
     }
 }
 @media (max-width: 480px) {
     html{
         font-size: 10px;
+    }
+    .support {
+        margin-top: -1.5rem;
     }
 }
