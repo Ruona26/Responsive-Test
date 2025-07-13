@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+.container{
+    max-width: 1200px;
+    margin: 2rem auto;
+    width: 90%;
+    box-shadow: 0 20px 15px rgba(0,0,0,0.5);
+    border-radius: 14px;
+    overflow: hidden;
+   
+}
+
+  .menu {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    display: none;
+ }
+
+
+.hero {
+    background-color: #f8f5fc;
+    border-radius: 14px;
+}    
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(1rem, 5vw, 2rem);
+    flex-wrap: wrap;
+}
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+nav {   
+    flex: 1;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    gap: 1.5rem; padding: 0; margin: 0;
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+nav a:hover, .active {
+    background-color: #582d9e;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    color: #fff;
+    border-radius: 10px;
+    transition: 1s ease;
+}
+.row h1 {
+    font-size: 3rem;
+    color: #222;
+    
+    padding: 10px 0;
+}
+.row p:first-of-type {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    color: #222;
+}
+.row a {
+    text-decoration: none;
+}
+.hero-text p:last-of-type {
+    margin-bottom: 2rem;
+}
+.hero-img {
+   margin-bottom: 3rem;
+}
+.wave {
+    margin-top: -6rem;
+    margin-bottom: -1rem;
+}
+.Courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.courses-section, .events, .support {
+    padding: 3rem 5rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.courses-section h3, .events h3, .support h3{
+    font-size: 1.875rem;
+    margin-bottom: 1.3rem;
+    padding-left: 5rem;
+}
+.card{
+    background-color: #f3effa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 14.375rem;
+    cursor: pointer;
+}
+
+.cardm {
+    background-color: #582d9e;
+    padding: 1.5rem;
+    color: #f3effa;
+    border-radius: 10px;
+    width: 14.375rem;
+    cursor: pointer;   
+}
+
+.cardm p {
+    color: #f3effa !important;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    gap: 0.3125rem;
+}
+.rangem {
+   -webkit-appearance: none;
+    appearance: none;
+    height: 0.375rem;
+    border-radius: 999px;
+    background: #9b76d3;
+    width: 100%;
+    outline: none;
+    overflow: hidden; 
+}
+.rangem::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    background: #f3effa;
+    cursor: pointer;
+    height: 0.375rem;
+    width: 1rem;
+    box-shadow: -350px 0px 0px 340px #f3effa;   
+}
+
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.375rem;
+    border-radius: 999px;
+    background: #fff;
+    width: 100%;
+    outline: none;
+    overflow: hidden;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    background: #582d9e;
+    cursor: pointer;
+    height: 0.375rem;
+    width: 1rem;
+    box-shadow: -350px 0px 0px 340px #582d9e;
+}
+.main-events {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+.acard {
+    background-color: #f3effa;
+    margin-bottom: 1rem;
+    border-radius: 13px;
+    padding: 1rem 7rem 1rem 1rem;
+    display: flex;
+    gap: 0.625rem;
+    width: 27vw;
+    height: 12vh;
+    cursor: pointer;
+
+    
+}
+.date {
+    background-color: #fff;
+    padding: 0.1875rem 0.375rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.date p:first-of-type {
+    color: #582d9e;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.625rem;  
+    margin-bottom: 1rem;
+    flex: 1;
+    font-size: 1.2rem;
+
+}
+.text p:first-of-type {
+    margin-bottom: 0.375rem;
+}
+.text span {
+    font-size: 0.875rem;
+}
+
+.resources {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    gap: 1.25rem;
+}
+
+.rcard {
+     background-color: #f3effa;
+     padding: 2.7rem;
+     width: 40%;
+     height: 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     border-radius: 13px;
+     cursor: pointer;
+}
+.support{
+    margin-top: -4rem;
+}
+.support p{
+    margin-top: -1rem;
+    line-height: 4rem;
+    margin-left: 5rem;
+}
+.support a {
+    text-decoration: none;
+}
+.copyright {
+    background-color: #f3effe;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 13px;
+    } 
+    .main-events {
+    display: flex;
+    justify-content: center;
+    padding: 0 5rem;
+    }  
+    .acard {
+        height: 13vh;
+    }
+}
+@media (max-width: 800px) {
+    html {
+        font-size: 13px;
+    }
+    .menu {
+        display: block;
+    }
+   header {
+    position: relative;
+    width: 100%;
+   }
+   header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 2rem 0;
+    width: 100%;
+    background-color: #f3effa;
+    border-radius: 0 0 10px 10px;
+    display: none;
+   }
+   header nav ul {
+    flex-direction: column;
+   }
+   header nav ul li a {
+    font-size: 1.5rem;
+   }
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-img {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card, .cardm {
+        width: 45vw;
+        height: auto;
+        font-size: 1rem;
+    }  
+    .main-events {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5rem;
+    align-items: center;
+    }
+
+    .acard {
+    display: flex;
+    width: 60vw;
+    cursor: pointer;
+    }
+    
+   .resources {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: 30vh;
+    gap: 1.25rem;
+    margin: 2rem;
+    }
+    .support {
+        text-align: center;
+        width: 100%;
+        margin-left: -3rem;
+        
+    }
+}
+@media (max-width: 480px) {
+    html{
+        font-size: 10px;
+    }
+}
