@@ -184,7 +184,8 @@ nav a:hover, .active {
     display: flex;
     gap: 0.625rem;
     width: 27vw;
-    /* height: 12vh; */
+    max-height: 8rem;
+    overflow: hidden;
     cursor: pointer;
     
 }
@@ -220,13 +221,16 @@ nav a:hover, .active {
     flex-wrap: wrap;
     width: 60%;
     gap: 1.25rem;
+    align-items: stretch;
 }
 
 .rcard {
+    
      background-color: #f3effa;
      padding: 2.7rem;
      width: 40%;
-     height: 50%;
+     min-height: 10.5rem;
+     height: auto;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -272,7 +276,10 @@ nav a:hover, .active {
     padding: 0 5rem;
     }  
     .acard {
-        /* height: 13vh; */
+        max-height: 7rem;
+    }
+    .rcard {
+        min-height: 11rem;
     }
 }
 @media (max-width: 800px) {
