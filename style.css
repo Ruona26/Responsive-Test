@@ -271,7 +271,7 @@ nav a:hover, .active {
     padding: 0 5rem;
     }  
     .acard {
-        height: 13vh;
+        /* height: 13vh; */
     }
 }
 @media (max-width: 800px) {
