@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins';
     
 }
 .container{
@@ -15,11 +15,12 @@
    
 }
 
-  .menu {
+  .menu-toggle {
     background: transparent;
     border: none;
     font-size: 1.5rem;
     display: none;
+    color: #582d9e;
  }
 
 
@@ -41,7 +42,7 @@
 nav {   
     flex: 1;
 }
-nav ul {
+.nav-links {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -76,11 +77,15 @@ nav a:hover, .active {
 .row a {
     text-decoration: none;
 }
+.hero-text {
+    margin-left: 2rem;
+}
 .hero-text p:last-of-type {
     margin-bottom: 2rem;
 }
 .hero-img {
    margin-bottom: 3rem;
+   margin-right: 2rem;
 }
 .wave {
     margin-top: -6rem;
@@ -286,36 +291,47 @@ nav a:hover, .active {
     html {
         font-size: 13px;
     }
-    .menu {
+    .menu-toggle {
         display: block;
     }
    header {
     position: relative;
     width: 100%;
    }
-   header nav {
+   .nav-links {
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 2rem 0;
+    padding: 0 0;
     width: 100%;
     background-color: #f3effa;
     border-radius: 0 0 10px 10px;
-    display: none;
+    opacity: 0.95;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
+    z-index: 1000;
    }
-   header nav ul {
-    flex-direction: column;
+  
+   .nav-links.open {
+    display: flex;
+    max-height: 300px;
+    padding: 2rem 0;
    }
+
    header nav ul li a {
     font-size: 1.5rem;
    }
     .hero-text {
         width: 100%;
         text-align: center;
+        margin: 0 auto;
     }
     .hero-img {
         display: flex;
-        width: 100%;
+        width: 70%;
+        margin: 0 auto;
         align-items: center;
         justify-content: center;
     }
@@ -326,9 +342,10 @@ nav a:hover, .active {
 
     }
     .card, .cardm {
-        width: 45vw;
+        width: 90%;
         height: auto;
         font-size: 1rem;
+        /* margin: 0 auto; */
     }  
     .main-events {
     display: flex;

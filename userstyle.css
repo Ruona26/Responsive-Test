@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+#body {
+    margin: 3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 14px;
+    flex: 1 1 60%;
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fefefe;
+}
+
+header {
+    background-color: #542c5d;
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+.logo {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    align-items: center;
+}
+.logo p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.name, .sidebar-header{
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    font-size: 1rem;
+    color: #fefefe;
+}
+.sidebar-header {
+    color: #542c5d;
+    padding-left: 0.5rem;
+    display: none;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar {
+    padding: 1rem;
+    width: 30%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.menu-toggle2 {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    display: none;
+    color: #542c5d;
+    margin-bottom: 1rem;
+
+}
+
+.sidebar a {
+    display: flex;
+    text-decoration: none;
+    color: #542c5d;
+    line-height: 4rem;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+}
+.sidebar a:hover {
+    padding-left: 0.5rem;
+    background-color: #f3effa;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+.nav-text {
+    margin-left: 1rem;
+}
+
+/* Content Section */
+
+.content {
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.content-card {
+    position: relative;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border-radius: 7px;
+    margin: 0.5rem 0 2rem 0;
+}
+.topic p:first-of-type{
+    line-height: 2rem;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.meeting-link {
+    padding: 0.5rem;
+    background-color: #faf6fb;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border: 0.2px solid #faf6fb;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.meeting-link:hover {
+    padding: 0.6rem;
+    color: #fefefe;
+    background-color: #542c5d;
+    border: 0.2px solid #542c5d;
+    transition: 0.5s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.lecture-1, .lecture-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lecture-2 {
+    margin-top: 1rem;
+}
+.line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    background-color: #ccc;
+    height: 0.5px;
+}
+.lecture-2 {
+    padding-top: 1rem;
+}
+.file {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.video-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+/* Media Query */
+@media  (max-width: 768px) {
+    #body {
+        margin: 0;
+        box-shadow: 0 0 0 #fff;
+    }
+    header {
+        border-radius: 0;
+        position: sticky;
+        top: 0;
+    }
+
+    /* Sidebar Section */
+
+   .menu-toggle2 {
+    display: block;
+   }
+   
+   .nav-text {
+    display: none;
+}
+
+   .sidebar {
+    position: fixed;
+    width: 5rem;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    transition: all 1s ease;
+    z-index: 100;
+   }
+   
+   .sidebar.active{
+    width: 15rem;
+   }
+
+   #menuToggle2 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+   }
+   #menuToggle2 .bar {
+    width: 25px;
+    height: 3px;
+    background: #542c5d;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+   }
+  
+   #menuToggle2.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 25px;
+   }
+   #menuToggle2.active .bar:nth-child(2) {
+   opacity: 0;
+   }
+   #menuToggle2.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 25px;
+   }
+   .icons {
+    padding-left: .5rem;
+   }
+
+   .sidebar.active  #menuToggle2 {
+    left: 90%;
+   }
+   .sidebar.active .nav-text {
+    display: block;
+   }
+
+
+   /* Content Section */
+   .content {
+    margin-left: 5rem;
+   }
+
+   .lecture-1, .lecture-2, .details, .video-content {
+    flex-direction: column;
+    justify-content: centre;
+    align-items: flex-start;
+    line-height: 1.5rem;
+   }
+   .file1 {
+    margin-bottom: 0.3rem;
+   }
+   .file, .date-link {
+    margin-top: 0.5rem;
+   }
+   .date-link {
+    gap: 1rem;
+   }
+}
+
+/* Other Screen Sizes */
+ @media (max-width: 460px) {
+    html{
+        font-size: 15px;
+    }
+    #body {
+        margin: 0;
+    }
+
+}
+@media (max-width: 420px) {
+    .name p {
+        display: none;
+    } 
+} 

@@ -4,8 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tech Project</title>
+
+        <!-- Poppins font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- AOS animation -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
         <link rel="stylesheet" href="style.css">
+        
+        <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+        <script src="main.js" defer></script>
     </head>
     <body>
     <div class="container">
@@ -13,20 +28,20 @@
             <header class="row">
             <div class="logo"><img src="Images/file_00000000192461f4a652614d6404e44b.png" width="200" height="80" alt=""></div>
             <nav>
-                <ul>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#courses">Courses</a></li>
-                    <li><a href="#calendar">Calendar</a></li>
                     <li><a href="#resources">Resources</a></li>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
                     <li><a href="#" class="active">Login</a></li>
                 </ul>
             </nav>
-            <button class="menu"><i class="fa-solid fa-bars"></i></button>
+            <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
         </header>
         <div class="hero-content row">
             <div class="hero-text">
-            <h1>Welcome to Your <br> Learning Hub</h1>
-            <p>Empowering the next generation <br> of developers & tech leaders</p>
-            <p><a href="#" class="active">Continue Learning</a></p>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Welcome to Your <br> Learning Hub</h1>
+            <p data-aos="fade-up" data-aos-duration="1300">Empowering the next generation <br> of developers & tech leaders</p>
+            <p data-aos="fade-down" data-aos-duration="1200"><a href="#" class="active">Continue Learning</a></p>
         </div>
         <div class="hero-img">
             <img src="Images/Laptop Man.png" width="350" height="400" alt="">
@@ -38,7 +53,7 @@
         <section id="courses" class="courses-section">
             <h3>My Courses</h3>
             <section class="Courses row">
-                <div class="card">
+                <div class="card" data-aos="zoom-in-right" data-aos-duration="1200">
                     <div class="icon">
                       <i class="fa-solid fa-code" style="color: #fff; background-color: #582d9e; padding: 0.5rem; border-radius: 5px;"></i>
                       <p>Web Development</p>
@@ -48,7 +63,7 @@
                         
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="zoom-in" data-aos-duration="1200">
                     <div class="icon">
                         <i class="fa-solid fa-magnifying-glass-chart" style="color: #fff; background-color: #582d9e; padding: 0.5rem; border-radius: 5px;"></i>
                         <p>Data Science</p>
@@ -57,7 +72,7 @@
                         <p>Progress 30%</p>
                 </div>
 
-                <div class="cardm">
+                <div class="cardm" data-aos="zoom-in-left" data-aos-duration="1200">
                     <div class="icon">
                         <i class="fa-solid fa-laptop-code" style="color: #582d9e; background-color: #f3effa; padding: 0.5rem; border-radius: 5px;"></i>
                         <p>Machine Learning</p>
@@ -72,7 +87,7 @@
             <h3>Upcoming Events</h3>
             <div class="main-events">
             <div id="calendar" class="activities">
-                <div class="acard">
+                <div class="acard" data-aos="fade-up" data-aos-duration="1000">
                     <div class="date">
                         <p>Jul</p>
                         <p>21</p>
@@ -83,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="acard">
+                <div class="acard" data-aos="fade-up" data-aos-duration="1300">
                     <div class="date">
                         <p>Aug</p>
                         <p>23</p>
@@ -94,7 +109,7 @@
                     </div>
                 </div>
 
-                <div class="acard">
+                <div class="acard" data-aos="fade-up" data-aos-duration="1500">
                     <div class="date">
                         <p>Sep</p>
                         <p>30</p>
@@ -109,20 +124,20 @@
             </div>
 
             <div id="resources" class="resources">
-                <div class="rcard">
+                <div class="rcard" data-aos="zoom-in-right" data-aos-duration="1200">
                     <i class="fa-solid fa-play" style="color: #f3effa; background-color: #582d9e; padding: 0.5rem; border-radius: 5px; margin-bottom: 5px;"></i>
                     <p>Lecture Recordings</p>
                 </div>
-                <div class="rcard">
+                <div class="rcard" data-aos="zoom-in-left" data-aos-duration="1200">
                     <i class="fa-solid fa-list-check" style="color: #f3effa; background-color: #582d9e; padding: 0.5rem; border-radius: 5px; margin-bottom: 5px;"></i>
                     <p>Assignments</p>
                 </div>
             
-                <div class="rcard">
+                <div class="rcard" data-aos="zoom-in-right" data-aos-duration="1200">
                     <i class="fa-solid fa-comments" style="color: #f3effa; background-color: #582d9e; padding: 0.5rem; border-radius: 5px; margin-bottom: 5px;"></i>
                     <p>Discussion Forum</p>
                 </div>
-                <div class="rcard">
+                <div class="rcard" data-aos="zoom-in-left" data-aos-duration="1200">
                     <i class="fa-solid fa-question" style="color: #f3effa; background-color: #582d9e; padding: 0.5rem; border-radius: 5px; margin-bottom: 5px;"></i>
                     <p>FAQ</p>
                 </div> 
@@ -132,16 +147,15 @@
         </section>
 
         <section class="support">
-            <h3>Support</h3>
-            <p>Need Help? Reach out to our support team.</p>
-            <p><a href="#" class="active">Contact Support</a></p>
+            <h3 data-aos="fade-up" data-aos-duration="1100">Support</h3>
+            <p data-aos="fade-up" data-aos-duration="1200">Need Help? Reach out to our support team.</p>
+            <p data-aos="fade-down" data-aos-duration="1500"><a href="#" class="active">Contact Support</a></p>
         </section>
 
         <footer class="copyright">
             <p>&copy; 2025 Prestige Coding &amp; Technology Ltd. All rights reserved.</p>
         </footer>
 </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
 </body>
 
 </html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/userstyle.css">
+    
+    <!-- <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script src="main.js"></script> -->
+</head>
+<body>
+<div id="body">
+    <header>
+        <section class="logo">
+            <i class="fa-solid fa-user" style="background-color: white; color: #542c5d; padding: 0.3rem; border-radius: 100px;"></i>
+            <p>DASHBOARD</p>
+        </section>
+        <Section class="name">
+            <p>Emily Carter</p>
+            <i class="fa-solid fa-user" style="background-color: white; color: #542c5d; padding: 0.3rem; border-radius: 100px;"></i>
+        </Section>
+        
+         
+    </header>
+
+    <main>
+        <!-- Nav and Sidebar -->
+        <nav class="sidebar">
+            <button class="menu-toggle2" id="menuToggle2" aria-label="Toggle Menu">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+            </button>
+            <p>
+                <a href="/index.html" class="active">
+                    <span class="icons"><i class="fa-solid fa-house" title="home"></i></span>
+                    <span class="nav-text">Home</span>
+                </a>
+            </p>
+            <p>
+                <a href="#live">
+                    <span class="icons"><i class="fa-solid fa-chalkboard-user"></i></span> 
+                    <span class="nav-text">Live Class Link</span>
+                </a>
+            </p>
+            <p>
+                <a href="#lecture">
+                    <span class="icons"><i class="fa-solid fa-folder"></i></span>
+                    <span class="nav-text">Lecture Materials<span>
+                </a>
+            </p>
+            <p>
+                <a href="#videos">
+                    <span class="icons"><i class="fa-solid fa-video"></i></span>
+                    <span class="nav-text">Recorded Videos<span>
+                </a>
+            </p>
+        </nav>
+        
+        <!-- Content Section -->
+        <div class="content">
+            <section class="live-class" id="live">
+
+                <!-- Live Class Section -->
+                <h3>Join Live Class</h3>
+                <div class="content-card">
+                    <h4>Introduction to Computer Science</h4>
+                    <div class="details">
+                        <div class="topic">
+                            <p>Dr Smith</p>
+                            <p>August 24, 10:00AM</p>
+                        </div>
+                        <div>
+                            <button class="meeting-link">Join Meeting</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Lecture Materials -->
+            <section class="materials" id="lecture">
+                <h3>Lecture Materials</h3>
+
+                <div class="content-card">
+                    <div class="lecture-1">
+                        <div class="topic">
+                            <h4>Lecture 1: Basics of Programming</h4>
+                            <p>Introduction to programming concepts</p>
+                        </div>
+                        <div class="file file1">
+                            <p>PDF</p>
+                            <button class="meeting-link">View</button>
+                        </div>
+                    </div>
+                     <div class="line"></div>
+                    <div class="lecture-2">
+                        <div class="topic">
+                            <h4>Lecture 2: Algorithms</h4>
+                            <p>Overview of Algorithms and their types</p>
+                        </div>
+                        <div class="file">
+                            <p>PDF</p>
+                            <button class="meeting-link">View</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Recorded Videos -->
+            <section class="videos" id="videos">
+                <h3>Recorded Videos</h3>
+
+                <div class="content-card video-content">
+                    <div class="topic">
+                        Data Strutures Overview
+                    </div>
+                    <div class="date-link">
+                        <p>April 20</p>
+                        <button class="meeting-link">Watch Video</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+
+</div>
+<script>
+    const btn = document.querySelector("#menuToggle2");
+    const sidebar = document.querySelector(".sidebar");
+
+    btn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    btn.classList.toggle('active');
+}); 
+
+const navLinks = sidebar.querySelectorAll('a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        btn.classList.remove('active');
+    });
+});
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+</body>
+</html>
