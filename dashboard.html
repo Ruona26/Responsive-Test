@@ -41,7 +41,7 @@
                  <span class="bar"></span>
             </button>
             <p>
-                <a href="index.html" class="active">
+                <a href="./index.html" class="active">
                     <span class="icons"><i class="fa-solid fa-house" title="home"></i></span>
                     <span class="nav-text">Home</span>
                 </a>
@@ -155,6 +155,14 @@ navLinks.forEach(link => {
     });
 });
 
+document.querySelectorAll('a[href^="#"]').forEach( link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId)?.scrollIntoView(
+            { behavior: 'smooth' });
+    });
+});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
 </body>
